@@ -1,1 +1,37 @@
-ola mundo
+let perguntas = [
+  {q: "Qual a capital do Brasil?", a: "Brasília"},
+  {q: "Quanto é 2 + 2?", a: "4"},
+  {q: "Cor do céu em dia claro?", a: "Azul"},
+  {q: "Qual é o maior planeta?", a: "Júpiter"},
+  {q: "Animal que mia?", a: "Gato"}
+];
+let indice = 0, resposta = "", acertos = 0;
+
+function setup() {
+  createCanvas(400, 200);
+  textSize(18);
+}
+
+function draw() {
+  background(220);
+  if (indice < perguntas.length) {
+    text(perguntas[indice].q, 20, 50);
+    text("Resposta: " + resposta, 20, 100);
+  } else {
+    text("Fim do Quiz!", 20, 50);
+    text("Acertos: " + acertos, 20, 100);
+    noLoop();
+  }
+}
+
+function keyPressed() {
+  if (keyCode === ENTER) {
+    if (resposta.toLowerCase() === perguntas[indice].a.toLowerCase()) acertos++;
+    resposta = "";
+    indice++;
+  } else if (keyCode === BACKSPACE) {
+    resposta = resposta.slice(0, -1);
+  } else if (key.length === 1) {
+    resposta += key;
+  }
+}
