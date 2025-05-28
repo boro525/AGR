@@ -1,1 +1,291 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Usa a fonte importada do Google Fonts */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
 
+.container {
+    width: 80%; /* Largura do conteúdo principal */
+    max-width: 1100px; /* Largura máxima para telas grandes */
+    margin: auto; /* Centraliza o container */
+    overflow: hidden; /* Limpa floats */
+    padding: 0 20px;
+}
+
+a {
+    color: #007bff; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s ease; /* Transição suave no hover */
+}
+
+.btn:hover {
+    background: #0056b3;
+    text-decoration: none;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para alinhar os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 5px; /* Espaço para o underline no hover */
+}
+
+header nav ul li a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #007bff; /* Underline azul no hover */
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section:last-of-type {
+    border-bottom: none; /* Remove a borda inferior da última seção */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+/* Seção Hero (Inicial) */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1500x500/333/FFF?text=Fundo+do+Site') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero .profile-pic {
+    border-radius: 50%; /* Torna a imagem circular */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #007bff;
+    margin-bottom: 20px;
+}
+
+#hero h2 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* Habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Colunas flexíveis */
+    gap: 20px;
+    text-align: center;
+}
+
+.skill-item {
+    background: #e9e9e9;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+/* Contato */
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+#contato form button {
+    width: 100%; /* Botão ocupa a largura total do formulário */
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsividade (Media Queries) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Aumenta a largura em telas menores */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Links da navegação em coluna */
+        gap: 10px; /* Espaço entre os links */
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 60px 0;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+}
