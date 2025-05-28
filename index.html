@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <title>Título da Página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Simples</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Conteúdo da página -->
+    <header>
+        <div class="container">
+            <h1>Seu Nome Aqui</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <img src="https://via.placeholder.com/150" alt="Sua Foto de Perfil" class="profile-pic">
+                <h2>Olá! Eu sou [Seu Nome]</h2>
+                <p>Sou um(a) desenvolvedor(a) apaixonado(a) por criar soluções web incríveis. Explore meu trabalho!</p>
+                <a href="#contato" class="btn">Entre em Contato</a>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>Com [X] anos de experiência em desenvolvimento web, possuo expertise em [mencione algumas áreas, ex: front-end, back-end, design responsivo]. Minha paixão é transformar ideias complexas em interfaces de usuário intuitivas e funcionais. Estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades.</p>
+                <p>Quando não estou codificando, gosto de [mencione um hobby, ex: ler livros, praticar esportes, viajar].</p>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <div class="container">
+                <h2>Minhas Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">HTML5</div>
+                    <div class="skill-item">CSS3</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Responsividade</div>
+                    <div class="skill-item">Git & GitHub</div>
+                    <div class="skill-item">Design Básico</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Projeto 1: Nome do Site</h3>
+                        <p>Uma breve descrição do Projeto 1, suas funcionalidades e tecnologias usadas.</p>
+                        <a href="#" target="_blank" class="btn-small">Ver Projeto</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projeto 2: Aplicação Web</h3>
+                        <p>Descrição do Projeto 2, destacando os desafios e soluções implementadas.</p>
+                        <a href="#" target="_blank" class="btn-small">Ver Projeto</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projeto 3: Landing Page</h3>
+                        <p>Um exemplo de página de destino, com foco em conversão e usabilidade.</p>
+                        <a href="#" target="_blank" class="btn-small">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Ficou interessado? Mande-me uma mensagem!</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
